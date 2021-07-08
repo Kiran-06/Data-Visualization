@@ -1,0 +1,15 @@
+import seaborn as sns
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+%matplotlib inline
+from numpy.random import randn
+
+
+fmri=sns.load_dataset('fmri')
+#fmri.head()
+#fmri.info()--datatype 1064 and 5 rows and columns resp
+#fmri.describe()
+sns.relplot(x='timepoint',y='signal',data=fmri)#relplot code for fmri
+sns.lineplot(x='timepoint',y='signal',data=fmri)#lineplot code for fmri
+sns.boxplot(x='timepoint',y='signal',data=fmri)#boxplot code for fmri
